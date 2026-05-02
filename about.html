@@ -1,66 +1,80 @@
 <!DOCTYPE html>
-<html lang="en" class="antialiased text-gray-900 bg-gray-50">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Software Project Development</title>
+    <title>About | SPD Course</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { 
+            font-family: 'Fredoka', sans-serif; 
+            background-color: #fef3c7; /* soft amber background */
+        }
+        /* Custom hard shadows for the cartoon effect */
+        .cartoon-shadow { box-shadow: 6px 6px 0px 0px #1f2937; }
+        .cartoon-shadow-sm { box-shadow: 3px 3px 0px 0px #1f2937; }
+        
+        /* Interactive click effect */
+        .btn-press:active {
+            transform: translate(6px, 6px);
+            box-shadow: 0px 0px 0px 0px #1f2937;
+        }
+        .btn-press-sm:active {
+            transform: translate(3px, 3px);
+            box-shadow: 0px 0px 0px 0px #1f2937;
+        }
     </style>
 </head>
-<body class="flex flex-col min-h-screen">
+<body class="flex flex-col min-h-screen text-gray-900">
 
-    <header class="sticky top-0 z-50 w-full backdrop-blur-md bg-white/80 border-b border-gray-200 transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-sm">
-                        SPD
-                    </div>
-                    <h1 class="text-xl font-bold text-gray-900 hidden sm:block tracking-tight">Software Project Dev</h1>
+    <header class="w-full p-4 md:p-6">
+        <div class="max-w-5xl mx-auto bg-amber-400 border-4 border-gray-900 rounded-2xl cartoon-shadow px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            
+            <div class="flex items-center gap-3">
+                <div class="text-4xl bg-white border-2 border-gray-900 rounded-full w-12 h-12 flex items-center justify-center cartoon-shadow-sm">
+                    🐻
                 </div>
-
-                <nav class="flex gap-8">
-                    <a href="index.html" class="text-sm font-medium text-gray-500 hover:text-indigo-600 transition-colors">Home</a>
-                    <a href="#" class="text-sm font-medium text-indigo-600 relative after:absolute after:bottom-[-22px] after:left-0 after:h-[2px] after:w-full after:bg-indigo-600">About</a>
-                </nav>
+                <h1 class="text-2xl font-bold tracking-wide">SPD Project</h1>
             </div>
+
+            <nav class="flex gap-4">
+                <a href="index.html" class="px-5 py-2 bg-white border-2 border-gray-900 rounded-xl cartoon-shadow-sm font-semibold transition-all btn-press-sm hover:bg-amber-50">
+                    Home
+                </a>
+                <a href="#" class="px-5 py-2 bg-orange-500 text-white border-2 border-gray-900 rounded-xl cartoon-shadow-sm font-semibold">
+                    About
+                </a>
+            </nav>
         </div>
     </header>
 
-    <main class="flex-grow flex items-center justify-center p-6 md:p-12">
-        <div class="max-w-3xl w-full text-center space-y-8 bg-white px-6 py-16 md:px-12 rounded-3xl shadow-sm border border-gray-100 transition-shadow hover:shadow-md">
+    <main class="flex-grow flex items-center justify-center p-6">
+        <div class="max-w-2xl w-full bg-white border-4 border-gray-900 rounded-3xl cartoon-shadow p-8 md:p-14 text-center relative overflow-hidden">
             
-            <div class="inline-flex items-center px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm font-semibold tracking-wide uppercase">
-                <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                Course Information
+            <div class="absolute -top-6 -right-6 text-7xl opacity-20 transform rotate-12 select-none">🐾</div>
+
+            <div class="inline-block bg-green-400 border-2 border-gray-900 text-gray-900 font-bold px-4 py-1.5 rounded-full mb-8 cartoon-shadow-sm">
+                🌲 Git Practice Zone
             </div>
 
-            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
-                About the <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">SPD Course</span>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-orange-600 drop-shadow-sm">
+                About The Course
             </h2>
 
-            <p class="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                This is the main About page. It is currently being used as a dedicated workspace for practicing <strong class="text-gray-900 font-semibold bg-gray-100 px-2 py-0.5 rounded">Modify vs. Delete</strong> conflicts in Git.
+            <p class="text-xl md:text-2xl font-medium mb-10 text-gray-700 leading-relaxed z-10 relative">
+                This is the main About page. Used for practicing <span class="bg-yellow-300 px-2 py-1 border-2 border-gray-900 rounded-lg inline-block my-1 transform -rotate-1">Modify vs Delete</span> conflicts! 🍯
             </p>
 
-            <div class="pt-4">
-                <a href="index.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 transition-all shadow-sm hover:shadow-md active:scale-95">
-                    Return to Home
-                </a>
-            </div>
+            <a href="index.html" class="inline-block bg-amber-400 hover:bg-amber-500 border-4 border-gray-900 text-gray-900 text-xl font-bold py-3 px-10 rounded-2xl cartoon-shadow transition-all btn-press">
+                Back to Den
+            </a>
+            
         </div>
     </main>
 
-    <footer class="bg-white border-t border-gray-200 mt-auto">
-        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-sm text-gray-400 font-medium">
-                &copy; 2026 Software Project Development Course. All rights reserved.
-            </p>
-        </div>
+    <footer class="p-6 mt-auto text-center font-bold text-gray-600">
+        <p>&copy; 2026 SPD Course | Built with paws</p>
     </footer>
 
 </body>
